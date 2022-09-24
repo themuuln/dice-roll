@@ -1,0 +1,88 @@
+:root {
+  --whiteish: #FFD460;
+  --orangeish: #F07B3F;
+  --grayish: #2D4059;
+  --redish: #EA5455;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background: var(--whiteish);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  background: var(--whiteish);
+  height: 100vh;
+  width: 100vw;
+  /* padding: 20px; */
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  background-color: var(--grayish);
+  color: var(--redish);
+  font-weight: 600;
+  font-size: 40px;
+  padding: 10px;
+  gap: 20px;
+}
+
+.yellowHover {
+  cursor: pointer;
+}
+
+.yellowHover:hover {
+  color: var(--whiteish);
+  transition: all .3s ease;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+#dice {
+  font-size: 300px;
+  font-weight: 800;
+  color: var(--redish);
+  cursor: pointer;
+  transition: .5s;
+}
+
+#dice:hover {
+  color: #d94444;
+}
+
+button {
+  /* border: none; */
+  height: 100px;
+  width: 250px;
+  font-size: 50px;
+  background-color: var(--grayish);
+  color: var(--redish);
+  border: var(--redish) solid 5px;
+  border-radius: 15px;
+  transition: all .5s;
+}
+
+button:hover {
+  background-color: #172940;
+}
+
+caption {
+  height: fit-content;
+}
