@@ -58,13 +58,21 @@ main {
 #dice {
   font-size: 300px;
   font-weight: 800;
+  height: 350px;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: var(--redish);
   cursor: pointer;
   transition: .5s;
+  border: #172940 5px solid;
+  border-radius: 10px;
 }
 
 #dice:hover {
   color: #d94444;
+  /* transform: rotate(112deg); */
 }
 
 button {
