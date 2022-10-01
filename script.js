@@ -3,6 +3,7 @@ let diceNumber = document.getElementById("dice");
 
 btn.addEventListener("click", () => {
   randomNumberGenerator();
+  shakeEnabler();
 });
 
 let randomNumberGenerator = () => {
@@ -10,14 +11,17 @@ let randomNumberGenerator = () => {
 };
 
 let shakeEnabler = () => {
-  let pos = 0;
-  let id = setInterval(frame, 10);
-  let frame = () => {
-    if (pos == 50) {
-      clearInterval(id);
+  let timerId = null;
+  let rot = 0;
+
+  timerId = setInterval(frame, 0.1);
+
+  function frame() {
+    if (rot == 180) {
+      clearInterval(timerId);
     } else {
-      pos++;
-      btn.style.transform = ``
+      rot++;
+      diceNumber.style.transform = "rotate(" + rot + "deg)";
     }
   }
 };

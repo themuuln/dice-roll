@@ -66,8 +66,9 @@ main {
   color: var(--redish);
   cursor: pointer;
   transition: .5s;
-  border: #172940 5px solid;
+  border: #172940 1px solid;
   border-radius: 10px;
+  margin: 30px 0px;
 }
 
 #dice:hover {
@@ -85,6 +86,7 @@ button {
   border: var(--redish) solid 5px;
   border-radius: 15px;
   transition: all .5s;
+  cursor: pointer;
 }
 
 button:hover {
