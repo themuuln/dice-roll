@@ -17,11 +17,31 @@ let shakeEnabler = () => {
   timerId = setInterval(frame, 0.1);
 
   function frame() {
-    if (rot == 180) {
+    if (rot == 360) {
       clearInterval(timerId);
     } else {
       rot++;
-      diceNumber.style.transform = "rotate(" + rot + "deg)";
+      diceNumber.style.transform = "translate(" + rot + "deg)";
     }
   }
 };
+
+// let clicked = false;
+// btn.addEventListener("click", () => {
+//   if (clicked == false) {
+//     btn.style.transform = "scale(1.1)";
+//     clicked = true;
+//   } else {
+//     btn.style.transform = "scale(1)";
+//   }
+// });
+btn.addEventListener("click", () => {
+  let clicked = false;
+  if (clicked == false) {
+    btn.style.transform = "scale(1.2)";
+    clicked = true;
+    setTimeout(() => {
+      btn.style.transform = "scale(1)";
+    }, 200);
+  }
+});
