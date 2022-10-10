@@ -13,6 +13,7 @@ body {
   justify-content: center;
   background: var(--whiteish);
   font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
 }
 
 .container {
@@ -87,6 +88,7 @@ button {
   border-radius: 15px;
   transition: all .5s;
   cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 button:hover {
@@ -95,4 +97,10 @@ button:hover {
 
 caption {
   height: fit-content;
+}
+
+.total {
+  display: flex;
+  margin: 10px;
+  font-size: 20px;
 }
