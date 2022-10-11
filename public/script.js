@@ -8,7 +8,19 @@ let numberGenerator = (_) =>
   (diceNumber.innerHTML = Math.floor(Math.random() * 6 + 1));
 
 btn.addEventListener("click", () => {
-  numberGenerator();
+  setInterval(() => {
+    (_) => {
+      let;
+      for (shakeyNumber = 1; shakeyNumber >= 6; shakeyNumber++) {
+        // TODO: 1-6 hoorond toonii shuffle effect (1 secondiin tursh 60-100ms dawtamjtai)
+      }
+    };
+  }, 100);
+
+  // Generating number animation
+  setTimeout(() => {
+    numberGenerator();
+  }, 1000);
 
   // Button cooldown effect
 
