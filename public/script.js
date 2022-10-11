@@ -53,8 +53,8 @@ btn.addEventListener("click", () => {
 
 // ! Bin
 
-// Dice Shaking Animation
-// Unnecessary for now
+// Dice Shaking Animation made by DOM
+// ! Not Working lol
 
 // let shakeEnabler = () => {
 //   let timerId = null;
@@ -67,7 +67,7 @@ btn.addEventListener("click", () => {
 //       clearInterval(timerId);
 //     } else {
 //       trans++;
-// not working properly lol
+// not working properly
 // diceNumber.style.transform = "translate(" + trans + "px)";
 //     }
 //   }
