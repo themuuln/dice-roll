@@ -7,30 +7,32 @@ let total = document.querySelectorAll("#number");
 let numberGenerator = (_) =>
   (diceNumber.innerHTML = Math.floor(Math.random() * 6 + 1));
 
-let storetotal = () => {
-  total.innerText = "test";
-};
-
 btn.addEventListener("click", () => {
   numberGenerator();
-  shakeEnabler();
 
-  // Button cooldown
+  // Button cooldown effect
 
-  setTimeout(() => {}, 1000);
+  btn.style.pointerEvents = "none";
+  btn.style.backgroundColor = "#131b25";
+  btn.style.borderColor = "#9d3839";
+  setTimeout(() => {
+    btn.style.cursor = "default";
+    btn.style.pointerEvents = "all";
+    btn.style.backgroundColor = "#2D4059";
+    btn.style.borderColor = "#EA5455";
+  }, 1000);
 
-  // Button on click animation
+  // Button on click
 
   if (typeof NaN === "number") {
-    btn.style.transform = "scale(1.2)";
-    diceNumber.transform = "scale(1.1)";
+    btn.style.transform = "scale(1.4)";
     setTimeout(() => {
       btn.style.transform = "scale(1)";
-      diceNumber.transform = "scale(1)";
     }, 100);
   }
 
   // Shake animation
+
   diceNumber.style.animation = "shake .01s linear infinite";
   setTimeout(() => {
     diceNumber.style.animationPlayState = "paused";
