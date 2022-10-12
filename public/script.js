@@ -1,7 +1,7 @@
 let btn = document.getElementById("mainBtn");
 let diceNumber = document.getElementById("dice");
 let total = document.querySelectorAll("#number");
-
+//
 // Throwing a dice code
 
 let numberGenerator = (_) =>
@@ -49,6 +49,24 @@ btn.addEventListener("click", () => {
   setTimeout(() => {
     diceNumber.style.animationPlayState = "paused";
   }, 1000);
+
+  // Slot Numbers Effect
+
+  const slotNumbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+  const displayNumber = document.querySelector("#dice").innerHTML;
+
+  let init = (firstInit = true, groups = 1, duration = 1) => {
+    for (const displayNumber of displayNumbers) {
+      if (firstInit) {
+        displayNumber.dataset.spinned = "0";
+      } else if (door.dataset.spinned === "1") {
+        return;
+      }
+
+      const boxes = 
+      // TODO: Casino Slot Machine animation ...
+    }
+  };
 });
 
 // ! Bin
