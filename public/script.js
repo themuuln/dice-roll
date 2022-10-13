@@ -10,7 +10,8 @@ const numberGenerator = (_) =>
 
 btn.addEventListener("click", () => {
   // Roll onclick hide annoying GIF
-  gif.style.display = "none";
+  gif.style.visibility = "hidden";
+  gif.style.opacity = "0";
 
   // Sound Effect On
   diceSound.cloneNode(true).play();
