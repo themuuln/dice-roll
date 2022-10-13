@@ -159,3 +159,7 @@ caption {
     display: none;
   }
 }
+
+.soundOn {
+  height: 200px;
+}
