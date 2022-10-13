@@ -1,26 +1,14 @@
-let btn = document.getElementById("mainBtn");
-let diceNumber = document.getElementById("dice");
-let total = document.querySelectorAll("#number");
-let diceSound = new Audio("../sound/dice_sound.mp3");
-let gif = document.querySelector(".soundOn");
+const btn = document.getElementById("mainBtn");
+const diceNumber = document.getElementById("dice");
+const total = document.querySelectorAll("#number");
+const diceSound = new Audio("../sound/dice_sound.mp3");
+const gif = document.querySelector(".soundOn");
 
-// Throwing a dice code
-
-let numberGenerator = (_) =>
+// Main function
+const numberGenerator = (_) =>
   (diceNumber.innerHTML = Math.floor(Math.random() * 6 + 1));
 
 btn.addEventListener("click", () => {
-  // Slot Machine Effect
-
-  // setInterval(() => {
-  //   (_) => {
-  //     let;
-  //     for (shakeyNumber = 1; shakeyNumber >= 6; shakeyNumber++) {
-  //       // TODO: 1-6 hoorond toonii shuffle effect (1 secondiin tursh 60-100ms dawtamjtai)
-  //     }
-  //   };
-  // }, 100);
-
   // Roll onclick hide annoying GIF
   gif.style.display = "none";
 
@@ -37,10 +25,12 @@ btn.addEventListener("click", () => {
   btn.style.pointerEvents = "none";
   btn.style.backgroundColor = "var(--main)";
   btn.style.borderColor = "var(--dark)";
+  btn.style.color = "var(--lightcyan)";
   setTimeout(() => {
     btn.style.pointerEvents = "all";
     btn.style.backgroundColor = "var(--lightcyan)";
     btn.style.borderColor = "var(--background)";
+    btn.style.color = "var(--main)";
   }, 1000);
 
   // Button on click animation
@@ -59,6 +49,8 @@ btn.addEventListener("click", () => {
     diceNumber.style.animationPlayState = "paused";
   }, 1000);
 
+  // ! Slot Machine Effect !
+
   // Slot Numbers Effect
 
   // const slotNumbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
@@ -76,4 +68,15 @@ btn.addEventListener("click", () => {
   // TODO: Casino Slot Machine animation ...
   //   }
   // };
+
+  // Slot Machine Effect
+
+  // setInterval(() => {
+  //   (_) => {
+  //     let;
+  //     for (shakeyNumber = 1; shakeyNumber >= 6; shakeyNumber++) {
+  //       // TODO: 1-6 hoorond toonii shuffle effect (1 secondiin tursh 60-100ms dawtamjtai)
+  //     }
+  //   };
+  // }, 100);
 });
