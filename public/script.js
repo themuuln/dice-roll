@@ -10,6 +10,8 @@ let numberGenerator = (_) =>
   (diceNumber.innerHTML = Math.floor(Math.random() * 6 + 1));
 
 btn.addEventListener("click", () => {
+  // Slot Machine Effect
+
   // setInterval(() => {
   //   (_) => {
   //     let;
@@ -19,6 +21,7 @@ btn.addEventListener("click", () => {
   //   };
   // }, 100);
 
+  // Roll onclick hide annoying GIF
   gif.style.display = "none";
 
   // Sound Effect On
@@ -34,15 +37,13 @@ btn.addEventListener("click", () => {
   btn.style.pointerEvents = "none";
   btn.style.backgroundColor = "var(--main)";
   btn.style.borderColor = "var(--dark)";
-  btn.style.color = "";
   setTimeout(() => {
-    // btn.style.cursor = "default";
     btn.style.pointerEvents = "all";
     btn.style.backgroundColor = "var(--lightcyan)";
     btn.style.borderColor = "var(--background)";
   }, 1000);
 
-  // Button on click
+  // Button on click animation
 
   if (typeof NaN === "number") {
     btn.style.transform = "scale(1.4)";
@@ -72,29 +73,7 @@ btn.addEventListener("click", () => {
   //     }
 
   //     const boxes =
-  //     // TODO: Casino Slot Machine animation ...
+  // TODO: Casino Slot Machine animation ...
   //   }
   // };
 });
-
-// ! Bin
-
-// Dice Shaking Animation made by DOM
-// ! Not Working lol
-
-// let shakeEnabler = () => {
-//   let timerId = null;
-//   let trans = 0;
-
-//   timerId = setInterval(frame, 0.1);
-
-//   function frame() {
-//     if (trans == 360) {
-//       clearInterval(timerId);
-//     } else {
-//       trans++;
-// not working properly
-// diceNumber.style.transform = "translate(" + trans + "px)";
-//     }
-//   }
-// };

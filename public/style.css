@@ -163,4 +163,5 @@ caption {
 
 .soundOn {
   height: 200px;
+  cursor: pointer;
 }
