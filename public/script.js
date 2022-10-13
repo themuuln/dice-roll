@@ -1,7 +1,8 @@
 let btn = document.getElementById("mainBtn");
 let diceNumber = document.getElementById("dice");
 let total = document.querySelectorAll("#number");
-const diceSound = new Audio("../sound/dice_sound.mp3");
+let diceSound = new Audio("../sound/dice_sound.mp3");
+let gif = document.querySelector(".soundOn");
 
 // Throwing a dice code
 
@@ -17,6 +18,10 @@ btn.addEventListener("click", () => {
   //     }
   //   };
   // }, 100);
+
+  gif.style.display = "none";
+
+  // Sound Effect On
   diceSound.cloneNode(true).play();
 
   // Generating number animation
@@ -27,13 +32,14 @@ btn.addEventListener("click", () => {
   // Button cooldown effect
 
   btn.style.pointerEvents = "none";
-  btn.style.backgroundColor = "#131b25";
-  btn.style.borderColor = "#9d3839";
+  btn.style.backgroundColor = "var(--main)";
+  btn.style.borderColor = "var(--dark)";
+  btn.style.color = "";
   setTimeout(() => {
     // btn.style.cursor = "default";
     btn.style.pointerEvents = "all";
-    btn.style.backgroundColor = "#2D4059";
-    btn.style.borderColor = "#EA5455";
+    btn.style.backgroundColor = "var(--lightcyan)";
+    btn.style.borderColor = "var(--background)";
   }, 1000);
 
   // Button on click

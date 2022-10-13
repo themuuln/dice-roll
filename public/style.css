@@ -1,8 +1,9 @@
 :root {
-  --whiteish: #FFD460;
-  --orangeish: #F07B3F;
-  --grayish: #2D4059;
-  --redish: #EA5455;
+  --background: #48BEFF;
+  --lightcyan: #76E2FF;
+  --main: #003569;
+  --click: #002953;
+  --dark: #004E85;
 }
 
 body {
@@ -11,20 +12,15 @@ body {
   width: 100vw;
   display: flex;
   justify-content: center;
-  background: var(--whiteish);
+  background: var(--background);
   font-family: 'Montserrat', sans-serif;
   overflow: hidden;
 }
 
 .container {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
-  background: var(--whiteish);
+  background: var(--background);
   height: 100vh;
   width: 100vw;
-  /* padding: 20px; */
 }
 
 header {
@@ -32,8 +28,8 @@ header {
   align-items: center;
   justify-content: center;
   height: 60px;
-  background-color: var(--grayish);
-  color: var(--redish);
+  background-color: var(--dark);
+  color: var(--background);
   font-weight: 600;
   font-size: 40px;
   padding: 10px;
@@ -45,7 +41,7 @@ header {
 }
 
 .yellowHover:hover {
-  color: var(--whiteish);
+  color: var(--lightcyan);
   transition: all .3s ease;
 }
 
@@ -64,18 +60,20 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--redish);
+  color: var(--main);
   cursor: pointer;
   transition: .5s;
-  border: #172940 1px solid;
+  border: var(--main) 1px solid;
   border-radius: 10px;
   margin: 30px 0px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   outline: none;
+  transition: all .3s;
 }
 
 #dice:hover {
-  color: #d94444;
+  color: #172940;
+  transform: scale(1.05);
   /* transform: rotate(112deg); */
 }
 
@@ -84,9 +82,10 @@ button {
   height: 100px;
   width: 250px;
   font-size: 50px;
-  background-color: var(--grayish);
-  color: var(--redish);
-  border: var(--redish) solid 5px;
+  font-weight: 600;
+  background-color: var(--lightcyan);
+  color: var(--main);
+  border: var(--background) solid 5px;
   border-radius: 15px;
   transition: all .5s;
   cursor: pointer;
@@ -95,7 +94,8 @@ button {
 }
 
 button:hover {
-  background-color: #172940;
+  background-color: var(--background);
+  color: var(--click);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
